@@ -113,13 +113,6 @@ class _LoginScreenState extends State<LoginScreen> {
               child: Text('Login'),
             ),
             SizedBox(height: 24),
-              ElevatedButton(
-                onPressed: (
-                    ){Navigator.push(
-                    context,
-                    MaterialPageRoute(
-                    builder: (context)=> HomePage()));},
-                child: Text('Login1'),)
           ],
         ),
       ),
