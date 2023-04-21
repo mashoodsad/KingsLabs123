@@ -35,9 +35,9 @@ class _HomePageState extends State<HomePage> {
 
   void _editProduct(int index) {
     Navigator.push(
-        context,
-        MaterialPageRoute(
-            builder: (context)=> ProductPage(product: {},)));
+      context,
+      MaterialPageRoute(builder: (context) => ProductPage()),
+    );
   }
 
   @override
