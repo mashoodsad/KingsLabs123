@@ -5,6 +5,8 @@ import 'package:http/http.dart' as http;
 import 'EditPage.dart';
 
 class HomePage extends StatefulWidget {
+  const HomePage({super.key});
+
   @override
   _HomePageState createState() => _HomePageState();
 }
@@ -24,7 +26,10 @@ class _HomePageState extends State<HomePage> {
     if (response.statusCode == 200) {
       setState(() {
         _dataList = json.decode(response.body);
+
       });
+    }else{
+      CircularProgressIndicator();
     }
   }
 
@@ -46,7 +51,7 @@ class _HomePageState extends State<HomePage> {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            Text(
+            const Text(
               'Product List:',
               style: TextStyle(fontSize: 18.0, fontWeight: FontWeight.bold),
             ),
